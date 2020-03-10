@@ -4,7 +4,7 @@
 
 // add fragment varying if feature enabled
 
-module.exports = [
+export default [
 
 "#ifdef USE_COLOR",
 

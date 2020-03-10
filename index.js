@@ -1,13 +1,14 @@
 /**************************
  * Dusan Bosnjak @pailhead
  **************************/
- 
-module.exports = function( THREE ){
+import MonkeyPatch from './monkey-patch.js';
+
+export default function( THREE ){
 
 const differentSignature = parseInt(THREE.REVISION) >= 96
 
 //monkeypatch shaders
-require('./monkey-patch.js')(THREE);
+MonkeyPatch(THREE);
 
 
 //depth mat

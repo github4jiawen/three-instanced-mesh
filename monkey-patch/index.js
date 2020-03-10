@@ -1,15 +1,21 @@
 /**************************
  * Dusan Bosnjak @pailhead
  **************************/
+import begin_vertex from './begin_vertex.glsl.js';
+import color_fragment from './color_fragment.glsl.js';
+import color_pars_fragment from './color_pars_fragment.glsl.js';
+import color_vertex from './color_vertex.glsl.js';
+import defaultnormal_vertex from './defaultnormal_vertex.glsl.js';
+import uv_pars_vertex from './uv_pars_vertex.glsl.js';
 
-module.exports = function( THREE ){
+export default function( THREE ){
 
-	//patches these methods and shader chunks with the required logic 
-	THREE.ShaderChunk[ 'begin_vertex' ] = 				require('./begin_vertex.glsl.js'); 
-	THREE.ShaderChunk[ 'color_fragment' ] = 			require('./color_fragment.glsl.js');
-	THREE.ShaderChunk[ 'color_pars_fragment' ] = 		require('./color_pars_fragment.glsl.js');
-	THREE.ShaderChunk[ 'color_vertex' ] = 				require('./color_vertex.glsl.js');
-	THREE.ShaderChunk[ 'defaultnormal_vertex' ] = 		require('./defaultnormal_vertex.glsl.js');
-	THREE.ShaderChunk[ 'uv_pars_vertex' ] = 			require('./uv_pars_vertex.glsl.js');
-	
+	//patches these methods and shader chunks with the required logic
+	THREE.ShaderChunk[ 'begin_vertex' ] = 				begin_vertex;
+	THREE.ShaderChunk[ 'color_fragment' ] = 			color_fragment;
+	THREE.ShaderChunk[ 'color_pars_fragment' ] = 		color_pars_fragment;
+	THREE.ShaderChunk[ 'color_vertex' ] = 				color_vertex;
+	THREE.ShaderChunk[ 'defaultnormal_vertex' ] = 		defaultnormal_vertex;
+	THREE.ShaderChunk[ 'uv_pars_vertex' ] = 			uv_pars_vertex;
+
 }

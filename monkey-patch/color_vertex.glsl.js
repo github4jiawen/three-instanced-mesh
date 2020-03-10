@@ -4,7 +4,7 @@
 
 // read per instance color from attribute, pass to varying
 
-module.exports = [
+export default [
 
 "#ifdef USE_COLOR",
 

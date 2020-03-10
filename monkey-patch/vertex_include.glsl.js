@@ -2,7 +2,7 @@
  * Dusan Bosnjak @pailhead
  **************************/
 
-module.exports = [
+export default [
 
 "#ifdef INSTANCE_TRANSFORM",
 

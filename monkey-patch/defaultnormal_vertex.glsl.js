@@ -2,7 +2,7 @@
  * Dusan Bosnjak @pailhead
  **************************/
 
-module.exports = [
+export default [
 
 "#ifdef FLIP_SIDED",
 

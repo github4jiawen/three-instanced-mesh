@@ -1,12 +1,13 @@
 /**************************
  * Dusan Bosnjak @pailhead
  **************************/
+import MonkeyPatch from './monkey-patch/index';
 
-module.exports = function ( THREE ){
+export default function ( THREE ){
 
 	if( /InstancedMesh/.test( THREE.REVISION ) ) return THREE;
 
-	require('./monkey-patch/index.js')( THREE );
+	MonkeyPatch( THREE );
 
 	THREE.REVISION += "_InstancedMesh";
 

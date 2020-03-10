@@ -4,7 +4,7 @@
 
 // transform vertices with the transform matrix
 
-module.exports = [
+export default [
 
 "#ifndef INSTANCE_TRANSFORM",
 

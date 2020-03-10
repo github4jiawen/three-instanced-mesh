@@ -4,7 +4,7 @@
 
 // multiply the color with per instance color if enabled
 
-module.exports = [
+export default [
 
 '#ifdef USE_COLOR',
 
